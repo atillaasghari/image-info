@@ -213,6 +213,8 @@ class ImageWidget(QWidget):
     def __init__(self, image):
         super().__init__()
 
+        self.image = image
+        
         q_image = QImage(image.tobytes(), image.width, image.height, image.width * 3, QImage.Format_RGB888)
         pixmap = QPixmap.fromImage(q_image)
 
